@@ -27,6 +27,16 @@ pipeline {
                 //sh 'sleep 10'
             }
         }
+        stage('Docker build') {
+            
+            steps {
+                   sh """
+                        docker build -t sunilmadha996/backend:${appVersion} .
+                        docker images
+                   """
+                }
+            }
+        }
         stage('Test') {
             steps {
                 sh 'echo This is test'
