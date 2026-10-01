@@ -22,21 +22,21 @@ pipeline {
                 }
             }
         }
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
-                //sh 'sleep 10'
-            }
-        }
-        stage('Docker build') {
+        // stage('Install Dependencies') {
+        //     steps {
+        //         sh 'npm install'
+        //         //sh 'sleep 10'
+        //     }
+        // }
+        // stage('Docker build') {
             
-            steps {
-                   sh """
-                        docker build -t sunilmadha996/backend:${appVersion} .
-                        docker images
-                   """
-                }
-            }
+        //     steps {
+        //            sh """
+        //                 docker build -t sunilmadha996/backend:${appVersion} .
+        //                 docker images
+        //            """
+        //         }
+        //     }
         }
         // stage('Test') {
         //     steps {
