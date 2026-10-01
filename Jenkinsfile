@@ -1,3 +1,4 @@
+//getting issue
 pipeline {
     agent {
         label 'AGENT-1'
@@ -37,12 +38,12 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-                sh 'echo This is test'
-                sh 'env'
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         sh 'echo This is test'
+        //         sh 'env'
+        //     }
+        // }
         stage('Deploy') {
             when {
                 //if below condition is equals to execute this stage, if not equals as below it will skip this stage
@@ -56,15 +57,15 @@ pipeline {
 
             }
         }
-        stage('Print Params'){
-            steps{
-                echo "Hello ${params.PERSON}"
-                echo "Biography: ${params.BIOGRAPHY}"
-                echo "Toggle: ${params.TOGGLE}"
-                echo "Choice: ${params.CHOICE}"
-                echo "Password: ${params.PASSWORD}"  
-            }
-        }
+        // stage('Print Params'){
+        //     steps{
+        //         echo "Hello ${params.PERSON}"
+        //         echo "Biography: ${params.BIOGRAPHY}"
+        //         echo "Toggle: ${params.TOGGLE}"
+        //         echo "Choice: ${params.CHOICE}"
+        //         echo "Password: ${params.PASSWORD}"  
+        //     }
+        // }
 
       
 
