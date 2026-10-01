@@ -20,7 +20,7 @@ pipeline {
                     appVersion = packageJson.version
                     echo "App version: ${appVersion}"
                 }
-            }
+            } 
         }
         // stage('Install Dependencies') {
         //     steps {
