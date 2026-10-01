@@ -44,19 +44,19 @@ pipeline {
         //         sh 'env'
         //     }
         // }
-        stage('Deploy') {
-            when {
-                //if below condition is equals to execute this stage, if not equals as below it will skip this stage
-                expression { env.GIT_BRANCH != "origin/main" }  
-                //branch 'production'
-            }
-            steps {
+        // stage('Deploy') {
+        //     when {
+        //         //if below condition is equals to execute this stage, if not equals as below it will skip this stage
+        //         expression { env.GIT_BRANCH != "origin/main" }  
+        //         //branch 'production'
+        //     }
+        //     steps {
 
-                    sh 'echo This is deploy'
-                    //error 'pipeline failed'
+        //             sh 'echo This is deploy'
+        //             //error 'pipeline failed'
 
-            }
-        }
+        //     }
+        // }
         // stage('Print Params'){
         //     steps{
         //         echo "Hello ${params.PERSON}"
