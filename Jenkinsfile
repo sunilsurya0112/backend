@@ -22,12 +22,12 @@ pipeline {
                 }
             }
         }
-        // stage('Install Dependencies') {
-        //     steps {
-        //         sh 'npm install'
-        //         //sh 'sleep 10'
-        //     }
-        // }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+                //sh 'sleep 10'
+            }
+        }
         // stage('Docker build') {
             
         //     steps {
